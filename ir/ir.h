@@ -763,6 +763,9 @@ enum class BuiltIn : uint32_t {
   eLegacyConstInt     = 37u,
   /** Legacy float constants, as an array of vec4<f32>. */
   eLegacyConstFloat   = 38u,
+  /** Multiview view index. Must be declared as a scalar unsigned
+   *  integer. Reads as zero when multiview is not enabled. */
+  eViewIndex          = 39u,
 };
 
 

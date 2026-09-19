@@ -981,6 +981,11 @@ void SpirvBuilder::emitDclBuiltInIoVar(const ir::Op& op) {
         return spv::BuiltInViewportIndex;
       }
 
+      case ir::BuiltIn::eViewIndex: {
+        enableCapability(spv::CapabilityMultiView);
+        return spv::BuiltInViewIndex;
+      }
+
       case ir::BuiltIn::eTessControlPointCountIn:
         return spv::BuiltInPatchVertices;
 

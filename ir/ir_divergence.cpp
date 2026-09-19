@@ -537,6 +537,10 @@ Scope DivergenceAnalysis::determineScopeForBuiltIn(const Op& op) {
     case BuiltIn::eIsFrontFace:
       return Scope::eQuad;
 
+    /* Uniform within a multiview pass */
+    case BuiltIn::eViewIndex:
+      return Scope::eGlobal;
+
     /* Globally uniform inputs */
     case BuiltIn::eGsVertexCountIn:
     case BuiltIn::eTessControlPointCountIn:

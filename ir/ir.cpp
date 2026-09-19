@@ -580,6 +580,7 @@ std::ostream& operator << (std::ostream& os, const BuiltIn& builtIn) {
     case BuiltIn::eLegacyConstBool:     return os << "ConstBool";
     case BuiltIn::eLegacyConstInt:      return os << "ConstInt";
     case BuiltIn::eLegacyConstFloat:    return os << "ConstFloat";
+    case BuiltIn::eViewIndex:           return os << "ViewIndex";
   }
 
   return os << "BuiltIn(" << uint32_t(builtIn) << ")";
